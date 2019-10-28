@@ -1,39 +1,68 @@
-# Frontend-Developer-Challenge
-The task is to build a Repository Search application with the Github Developer API v3. It can
-be broken down into three sub-tasks:
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-# 1. Repository Search by Name
+## Available Scripts
 
-The application should have an input field that allows the user to search for a
-repository. The search results should be displayed in a list in the UI.
-Each result should be displayed in a card which has the full name of the repository,
-the programming language, the repository description, a link to the repository, the
-number of stars and the number of open issues in the repository. The UI should show
-only the 6 most relevant results for a given search criteria.
+In the project directory, you can run:
 
-# 2. Top Contributors Page
+### `yarn start`
 
-Inside each repository card, there should be a link to Top Contributors Page that
-when clicked, navigates to a new page that displays the top 10 contributors for that
-repository.
-The contributor info should be displayed in a card that has Github username of the
-contributor, their Github avatar, a link to the their Github profile, and the number of
-contributions.
+Runs the app in the development mode.<br />
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-# 3. Pagination
+The page will reload if you make edits.<br />
+You will also see any lint errors in the console.
 
-The list of contributors should have a Fetch More button at the end. When the user
-clicks on Fetch More, he should be able to see 5 more contributors in addition to the
-already displayed contributors.
-The application should be written using React, and you are free to use any other tool or
-framework of your choice. The app should contain some basic styling, i.e. the content should
-be readable, evenly spaced and properly aligned, but building a flawless UI is not the main
-objective of this task. You will find below some wireframes of what the UI could possibly look
-like, but this is just an indication and you have complete freedom to change it.
-The goal is to write a properly structured application with reusable code that respects
-Javascript development guidelines. Documentation of any library that might be needed may
-be referred.
-Please make your solution available via Github/Gitlab, with clear instructions to install and
-run it. We are also also interested in your commit history, so make sure to include it! We look
-forward to receiving your solution.
+### `yarn test`
 
+Launches the test runner in the interactive watch mode.<br />
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+
+### `yarn build`
+
+Builds the app for production to the `build` folder.<br />
+It correctly bundles React in production mode and optimizes the build for the best performance.
+
+The build is minified and the filenames include the hashes.<br />
+Your app is ready to be deployed!
+
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+
+### `yarn eject`
+
+**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+
+If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+
+Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+
+You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+
+## Learn More
+
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+
+To learn React, check out the [React documentation](https://reactjs.org/).
+
+### Code Splitting
+
+This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+
+### Analyzing the Bundle Size
+
+This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
+
+### Making a Progressive Web App
+
+This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
+
+### Advanced Configuration
+
+This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
+
+### Deployment
+
+This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
+
+### `yarn build` fails to minify
+
+This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
