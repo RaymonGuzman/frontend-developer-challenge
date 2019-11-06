@@ -3,27 +3,31 @@ import React, {useState} from 'react';
 export default function Center(props){
   const [name, setName] = useState();
 
-  const url = `https://api.github.com/search/repositories?q=${name}`;
-
   function handleNameChange(e){
     setName(e.target.value);
   }
+  function handleFecth() {
+  // alert('This is the '+ name)
+    const url = `https://api.github.com/search/repositories?q=${name}`;
+    console.log(url);
+    fetch(url).then((response)=>{
+      console.log(response);
+      return response.json();
+    }).then((myJson)=>{
+      console.log(myJson);
+    });
+  }
   
-  fetch(url).then((response)=>{
-    console.log(response);
-    return response.json();
-  }).then((myJson)=>{
-    console.log(myJson);
-  });
-
+  
   return(
-    <section>
-      <input 
-      value={name}
-      onChange={handleNameChange}
-      />
 
-    </section>
+    <form onSubmit={handleFecth()}> 
+      <label>
+        Name:
+        <input type="text" name="name" value={name} onChange={handleNameChange}/>
+      </label>
+      <input type="submit" value="Submit" />
+    </form>
   );
 }
 
