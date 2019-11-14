@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Redirect, Link } from 'react-router-dom';
-//import Prueba from './components/Prueba';
+import Prueba from './Prueba';
 
 
 export default function Center(props) {
@@ -21,11 +21,13 @@ export default function Center(props) {
     }).then((myJson) => {
      // console.log(myJson.items);
      setData(myJson.items);
-      //sleep(5000);
+     console.log(data);
+     //sleep(5000);
+     
     });
-    console.log({data});
+   // console.log({data});
     // Center.push("/prueba");
-    // <Link to="/prueba"></Link>;
+    // return <Prueba />;
   }
 
 
@@ -48,10 +50,11 @@ export default function Center(props) {
         Repository:
         <input type="text" name="name" value={name} onChange={handleNameChange} />
       </label>
-      {console.log(data)}
       <input type="submit" value="Submit" />
       {/* <Link to="/prueba"><input type="submit" value="Submit" /></Link> */}
+      {data ? <Prueba data={data}/> : ''}
     </form>
+    
 
   );
 }
