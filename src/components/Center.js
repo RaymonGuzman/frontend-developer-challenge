@@ -21,7 +21,7 @@ export default function Center(props) {
     }).then((myJson) => {
      // console.log(myJson.items);
      setData(myJson.items);
-     console.log(data);
+    //  console.log(data);
      //sleep(5000);
      
     });

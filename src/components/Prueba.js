@@ -1,16 +1,22 @@
 import React from 'react';
 
- 
 
-const Prueba = ({data}) => {
-      
-  
+
+function Prueba({ data }) {
+    //    console.log({data})
 
     return (
-        <h1>Prueba</h1>
-    );
+        data.map((data, i) => {
+            return (
+                <ul>
+                <li>{data.id}</li>
+                <li>{data.name}</li>
+                </ul>
+            )
+        })
+    )
 
-};
+}
 
 export default Prueba;
 
