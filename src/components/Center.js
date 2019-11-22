@@ -53,6 +53,7 @@ export default function Center(props) {
       <input type="submit" value="Submit" />
       {/* <Link to="/prueba"><input type="submit" value="Submit" /></Link> */}
       {data ? <Prueba data={data}/> : ''}
+      {console.log(data)}
     </form>
     
 
