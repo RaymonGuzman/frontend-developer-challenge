@@ -1,8 +1,21 @@
-import React from 'react';
+import React, { useState } from 'react';
 
-
+import { BrowserRouter as Router, Route, Switch, Link} from 'react-router-dom';
 
 function Prueba({ data }) {
+    const [collaborators, setCollaborators] = useState();
+
+    // function handleCollaborators({collaborators}){
+
+    //     const url= collaborators;
+    //     console.log(url);
+
+    // }
+
+    function handleCollaborators(e){
+        setCollaborators(e.target.value);
+    }
+
 
     const myStyle = {
         backgroundImage:"-webkit-linear-gradient(top, #333333, #000000)",
@@ -28,8 +41,13 @@ function Prueba({ data }) {
                 <li>{data.id}</li>
                 <li>{data.name}</li>
                 <li>{data.language}</li>
-                {/* <li>{data.}</li> */}
+                {/* <li value={data.collaborators_url} onClick={handleCollaborators} >{data.collaborators_url}</li> */}
+                
+                {/* <input type="text" name="name" value={name} onChange={handleNameChange} /> */}
+                {console.log(collaborators)}
                 </ul>
+                {/* <link value={data.collaborators_url} onClick={handleCollaborators} > Collaborators </link> */}
+                <button value={data.collaborators_url} onClick={handleCollaborators} > Collaborators </button>
 
                 </div>
             )
