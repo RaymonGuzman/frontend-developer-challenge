@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import { BrowserRouter as Router, Route, Switch, Link} from 'react-router-dom';
 
 function Prueba({ data }) {
-    const [collaborators, setCollaborators] = useState();
+    // const [collaborators, setCollaborators] = useState();
 
     // function handleCollaborators({collaborators}){
 
@@ -12,9 +12,9 @@ function Prueba({ data }) {
 
     // }
 
-    function handleCollaborators(e){
-        setCollaborators(e.target.value);
-    }
+    // function handleCollaborators(e){
+    //     setCollaborators(e.target.value);
+    // }
 
 
     const myStyle = {
@@ -44,10 +44,10 @@ function Prueba({ data }) {
                 {/* <li value={data.collaborators_url} onClick={handleCollaborators} >{data.collaborators_url}</li> */}
                 
                 {/* <input type="text" name="name" value={name} onChange={handleNameChange} /> */}
-                {console.log(collaborators)}
                 </ul>
                 {/* <link value={data.collaborators_url} onClick={handleCollaborators} > Collaborators </link> */}
-                <button value={data.collaborators_url} onClick={handleCollaborators} > Collaborators </button>
+                <Link to={{ pathname: "/component", state:{data:data} }}> Collaborators </Link>
+                {/* {console.log(collaborators)} */}
 
                 </div>
             )

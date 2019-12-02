@@ -19,7 +19,7 @@ export default function Center(props) {
       console.log(response);
       return response.json();
     }).then((myJson) => {
-     // console.log(myJson.items);
+    //  console.log(myJson.items);
      setData(myJson.items);
     //  console.log(data);
      //sleep(5000);
