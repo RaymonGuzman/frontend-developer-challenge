@@ -1,41 +1,39 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 export default function Component(props){
-    const [contributors, setContributors] = useState('');
-
+    const [contributors, setContributors] = useState({ hits: [] });
+    // const data;
     const  urlConstributors  =  props.location.state.data.contributors_url;
+    
 
     // function handleConstriborators(){
-        fetch(urlConstributors).then((response) => {
-            // console.log(response);
-            return response.json();
-            // return <h1>Algo que poner</h1>;
-          }).then((myJson) => {
-           console.log(myJson);
-        //    setContributors(myJson);
-        //    console.log(myJson.id);
-        //    setData(myJson.items);
-        //   //  console.log(data);
-        //    //sleep(5000);
-           
-        //   });
-        });
+        useEffect(() => {
+            fetch(urlConstributors).then((response) => {
+                // console.log(response);
+                return response.json();
+                // return <h1>Algo que poner</h1>;
+              }).then((myJson) => {
+                // console.log(myJson);
+                // console.log(myJson);
+                setContributors(myJson);
+
+            });
+          }, []);
+
     // }
     return (
-        <h1>Probando</h1>
+
         // <div>
-        //     <h1>
+
         //     {console.log(contributors)}
-        //     </h1>
-        
         // </div>
-        // <div>
-
-
-        // <h1> Prueba del siguiente componente</h1>
-        // {console.log(urlConstributors)}
-        
-        // </div>
-    );
+        <ul>
+          {contributors.hits.map(item => (
+            <li key={item.id}>
+              <a href={item.node_id}>{item.login}</a>
+            </li>
+          ))}
+        </ul>
+      );
 
 }
