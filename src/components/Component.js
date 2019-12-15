@@ -28,23 +28,23 @@ export default function Component(props){
         }, []);
 
         function CountAndFetch(){
-          setCount(count+5);
-        //   fetch(urlConstributors).then((response) => {
-        //     // console.log(response);
-        //     return response.json();
-        //     // return <h1>Algo que poner</h1>;
-        //   }).then((myJson) => {
+          fetch(urlConstributors).then((response) => {
+            // console.log(response);
+            return response.json();
+            // return <h1>Algo que poner</h1>;
+          }).then((myJson) => {
             
-        //     // console.log(myJson);
-        //     // console.log(myJson[1]);
-        //     for (var i=0; i<count; i++){
-        //       arrayMyJson.push(myJson[i]);
-        //       // setContributors(myJson[i]);
-        //     }
-        //     setContributors(arrayMyJson);
-        //     console.log(arrayMyJson); 
+            // console.log(myJson);
+            // console.log(myJson[1]);
+            for (var i=0; i<count+5; i++){
+              arrayMyJson.push(myJson[i]);
+              // setContributors(myJson[i]);
+            }
+            setContributors(arrayMyJson);
+            setCount(count+5);
+            console.log(arrayMyJson); 
 
-        // });
+        });
         // this.forceUpdate();
         }
 
