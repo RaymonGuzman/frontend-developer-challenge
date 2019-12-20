@@ -26,7 +26,7 @@ function Prueba({ data }) {
         borderRadius: "10px",
         whiteSpace: "pre",
         boxSizing: "border-box",
-        width: "25%",
+        width: "35%",
         height: "20%"
     };
     //    console.log({data})
@@ -38,15 +38,18 @@ function Prueba({ data }) {
                 <div style={myStyle}>
 
                 <ul>
-                <li>{data.id}</li>
-                <li>{data.name}</li>
+                <li>{data.full_name}</li>
                 <li>{data.language}</li>
+                <li>{data.description}</li>
+                <li>{data.open_issues_count}</li>
+                <li>{data.stargazers_count}</li>
+
                 {/* <li value={data.collaborators_url} onClick={handleCollaborators} >{data.collaborators_url}</li> */}
                 
                 {/* <input type="text" name="name" value={name} onChange={handleNameChange} /> */}
                 </ul>
                 {/* <link value={data.collaborators_url} onClick={handleCollaborators} > Collaborators </link> */}
-                <Link to={{ pathname: "/component", state:{data:data} }}> Collaborators </Link>
+                <Link to={{ pathname: "/component", state:{data:data} }}> Contributors </Link>
                 {/* {console.log(collaborators)} */}
 
                 </div>

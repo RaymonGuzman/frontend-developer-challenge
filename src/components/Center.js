@@ -6,6 +6,7 @@ import Prueba from './Prueba';
 export default function Center(props) {
   const [name, setName] = useState('');
   const [data, setData] = useState();
+  const arrayMyJson = [];
 
   function handleNameChange(e) {
     setName(e.target.value);
@@ -19,8 +20,12 @@ export default function Center(props) {
       console.log(response);
       return response.json();
     }).then((myJson) => {
-    //  console.log(myJson.items);
-     setData(myJson.items);
+    //  console.log(myJson.items);.
+    for (var i=0; i<6; i++){
+      arrayMyJson.push(myJson.items[i]);
+      // setContributors(myJson[i]);
+    }
+    setData(arrayMyJson);
     //  console.log(data);
      //sleep(5000);
      
