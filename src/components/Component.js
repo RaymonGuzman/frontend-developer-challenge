@@ -64,6 +64,7 @@ export default function Component(props){
           
       //   }
       // </div>
+      
         <div>
 
           {/* {console.log(contributors)} */}

@@ -49,7 +49,9 @@ export default function Center(props) {
 
 
   return (
-    
+
+    <div >
+
     <form onSubmit={handleFecth}>
       <label>
         Repository:
@@ -57,9 +59,14 @@ export default function Center(props) {
       </label>
       <input type="submit" value="Submit" />
       {/* <Link to="/prueba"><input type="submit" value="Submit" /></Link> */}
+      <div>
+
       {data ? <Prueba data={data}/> : ''}
+      </div>
       {console.log(data)}
     </form>
+    
+    </div>
     
 
   );

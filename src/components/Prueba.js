@@ -15,7 +15,12 @@ function Prueba({ data }) {
     // function handleCollaborators(e){
     //     setCollaborators(e.target.value);
     // }
+    const externalBox = {
+        paddingInlineStart: "2%",
+        paddingInlineEnd: "2%",
+        float: "inline-start"
 
+    }
 
     const myStyle = {
         backgroundImage:"-webkit-linear-gradient(top, #333333, #000000)",
@@ -26,16 +31,21 @@ function Prueba({ data }) {
         borderRadius: "10px",
         whiteSpace: "pre",
         boxSizing: "border-box",
-        width: "35%",
-        height: "20%"
+        width: "100%",
+        height: "50%"
+        // float: "inline-start"
+        /* boxSizing: "border-box" */
+        // display:"inline"
     };
     //    console.log({data})
 
     return (
-        
-        data.map((data, i) => {
-            return (
-                <div style={myStyle}>
+        data.map(data => {
+            return(
+
+        <div style={externalBox}>
+
+            <div style={myStyle}>
 
                 <ul>
                 <li>{data.full_name}</li>
@@ -53,8 +63,11 @@ function Prueba({ data }) {
                 {/* {console.log(collaborators)} */}
 
                 </div>
-            )
-        })
+        </div>
+                );
+            
+        }
+        )
     )
 
 }
