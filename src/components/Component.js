@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+// import { url } from 'inspector';
 
 export default function Component(props){
     const [contributors, setContributors] = useState( [] );
@@ -69,6 +70,8 @@ export default function Component(props){
 
           {/* {console.log(contributors)} */}
           {contributors.map(item => (
+            
+            <div style={{background: `url(${item.avatar_url}) no-repeat`, height:"400px"}}>
             <ul>
             <li key={item.id}>
               <a href={item.node_id}>{item.login}</a>
@@ -76,13 +79,14 @@ export default function Component(props){
             <li>
               <a href={item.html_url}> Profile </a>
             </li>
-            <li>
+            {/* <li>
               <img src={item.avatar_url}></img>
-            </li>
+            </li> */}
             <li>
               {item.contributions}
             </li>
             </ul>
+            </div>
           ))}
             <button onClick={CountAndFetch}> + Load More</button>
             {console.log(count)}
