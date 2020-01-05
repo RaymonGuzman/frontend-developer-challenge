@@ -1,0 +1,26 @@
+@media (max-width: 1500px){
+    .externalBox{
+        padding-inline-start: 4%;
+        float: inherit;
+        width: 90%;
+        /* background: red; */
+
+    } 
+
+}
+    /* .externalBox{
+        padding-inline-start: 4%;
+        float: inline-start;
+        width: 45%;
+
+    }    */
+
+    @media (min-width: 1501px){
+        .externalBox{
+            padding-inline-start: 4%;
+            float: inline-start;
+            width: 45%;
+            /* background: blue; */
+    
+        } 
+    }

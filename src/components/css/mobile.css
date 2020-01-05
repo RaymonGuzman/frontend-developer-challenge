@@ -1,0 +1,15 @@
+@media (max-width: 600px){
+
+    .externalBox{
+        padding-inline-start: "4%";
+         /* paddingInlineEnd: "1%", */
+        float: "inherit";
+        width: "45%";
+    }
+    /* body{
+        background:yellow;
+    }
+    p {
+        background-color: red;
+    } */
+}

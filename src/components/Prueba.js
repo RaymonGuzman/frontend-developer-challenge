@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
-
 import { BrowserRouter as Router, Route, Switch, Link} from 'react-router-dom';
+import prueba from "./css/prueba.module.css";
+// import './css/mobile.css';
 
 function Prueba({ data }) {
     // const [collaborators, setCollaborators] = useState();
@@ -15,12 +16,13 @@ function Prueba({ data }) {
     // function handleCollaborators(e){
     //     setCollaborators(e.target.value);
     // }
-    const externalBox = {
-        paddingInlineStart: "2%",
-        paddingInlineEnd: "2%",
-        float: "inline-start"
+    // const externalBox = {
+    //     paddingInlineStart: "4%",
+    //     // paddingInlineEnd: "1%",
+    //     float: "inline-start",
+    //     width: "45%",
 
-    }
+    // }
 
     const myStyle = {
         backgroundImage:"-webkit-linear-gradient(top, #333333, #000000)",
@@ -30,9 +32,9 @@ function Prueba({ data }) {
         borderStyle: "solid",
         borderRadius: "10px",
         whiteSpace: "pre",
-        boxSizing: "border-box",
-        width: "100%",
-        height: "50%"
+        boxSizing: "border-box"
+        // width: "100%",
+        // height: "50%"
         // float: "inline-start"
         /* boxSizing: "border-box" */
         // display:"inline"
@@ -43,23 +45,21 @@ function Prueba({ data }) {
         data.map(data => {
             return(
 
-        <div style={externalBox}>
+        <div className={prueba.externalBox}>
 
             <div style={myStyle}>
 
-                <ul>
-                <li>{data.full_name}</li>
-                <li>{data.language}</li>
-                <li>{data.description}</li>
-                <li>{data.open_issues_count}</li>
-                <li>{data.stargazers_count}</li>
+                <h2>{data.full_name}</h2>
+                <p>{data.language}</p>
+                <h3>{data.description}</h3>
+                <p>{data.open_issues_count}</p>
+                <p>{data.stargazers_count}</p>
 
                 {/* <li value={data.collaborators_url} onClick={handleCollaborators} >{data.collaborators_url}</li> */}
                 
                 {/* <input type="text" name="name" value={name} onChange={handleNameChange} /> */}
-                </ul>
                 {/* <link value={data.collaborators_url} onClick={handleCollaborators} > Collaborators </link> */}
-                <Link to={{ pathname: "/component", state:{data:data} }}> Contributors </Link>
+                <Link to={{ pathname: "/component", state:{data:data} }}>Top Contributors </Link>
                 {/* {console.log(collaborators)} */}
 
                 </div>
