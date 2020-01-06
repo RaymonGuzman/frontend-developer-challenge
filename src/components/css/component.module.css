@@ -1,0 +1,65 @@
+@media (max-width: 1500px){
+    .internalContributor{
+        /* padding-inline-start: 4%;
+        float: inherit;
+        width: 90%; */
+
+        
+        /* background-size: 460px 460px;
+        background-repeat: no-repeat; */ /*Not Working */
+
+        
+
+    } 
+
+}
+    /* .internalBox{
+        padding-inline-start: 4%;
+        float: inline-start;
+        width: 45%;
+
+    }    */
+
+    /* Grid Styles -------------------------------------------*/
+    .cards {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(300px, 1fr));
+        padding-inline-start: 15%;
+        padding-top: 10%;
+        /* grid-gap: 5%; */
+        /* 
+        padding-left: 7%; */
+        padding-bottom: 100%;
+    }
+
+    @media (min-width: 1501px){
+        .externalContributor{
+            /* position:sticky; */
+            margin-top: -10%;
+            /* padding-bottom: 5%; */
+            /* float: inline-start; */
+            /* width: 45%; */
+            /* position: relative; */
+            /* display: flex; */
+            /* background-position-y: 50%; */
+            
+            
+        }
+        .internalContributor{
+            /* float: inline-start; */
+            /* width: 100%; */
+            /* position:relative; */
+
+            object-fit: cover;
+            
+            
+            /* background-size: 460px 460px;
+            background-repeat: no-repeat; */ /*Not Working */
+            /* background: blue; */
+        }
+        .cards {
+            /* max-width: 100%; */
+            /* max-height: fit-content; */
+            /* margin: 0 auto 30px; */
+        } 
+    }

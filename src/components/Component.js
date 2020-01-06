@@ -1,9 +1,11 @@
 import React, { useState, useEffect } from 'react';
+import component from "./css/component.module.css";
+
 // import { url } from 'inspector';
 
 export default function Component(props){
     const [contributors, setContributors] = useState( [] );
-    const [count, setCount] = useState(5);
+    const [count, setCount] = useState(10);
     // const data;
     const  urlConstributors  =  props.location.state.data.contributors_url;
     const arrayMyJson = [];
@@ -65,13 +67,15 @@ export default function Component(props){
           
       //   }
       // </div>
-      
-        <div>
+        <body>
+
+        
+        <section className={component.cards}>
 
           {/* {console.log(contributors)} */}
           {contributors.map(item => (
-            
-            <div style={{background: `url(${item.avatar_url}) no-repeat`, height:"400px"}}>
+            <div className={component.externalContributor}>
+            <div className={component.internalContributor} style={{background: `url(${item.avatar_url}) no-repeat`, height:"400px", backgroundSize:"300px 300px"}}>
             <ul>
             <li key={item.id}>
               <a href={item.node_id}>{item.login}</a>
@@ -87,11 +91,12 @@ export default function Component(props){
             </li>
             </ul>
             </div>
+            </div>
           ))}
-            <button onClick={CountAndFetch}> + Load More</button>
             {console.log(count)}
-        </div>
-        
+        </section>
+            <button onClick={CountAndFetch}> + Load More</button>
+        </body>
       );
 
 }
