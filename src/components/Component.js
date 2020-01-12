@@ -74,8 +74,8 @@ export default function Component(props){
 
           {/* {console.log(contributors)} */}
           {contributors.map(item => (
-            <div className={component.externalContributor}>
-            <div className={component.internalContributor} style={{background: `url(${item.avatar_url}) no-repeat`, height:"400px", backgroundSize:"300px 300px"}}>
+            // <div className={component.externalContributor}>
+            <div className={component.internalContributor} style={{background: `url(${item.avatar_url}) no-repeat`, height:"400px", backgroundSize:"350px 350px"}}>
             <ul>
             <li key={item.id}>
               <a href={item.node_id}>{item.login}</a>
@@ -91,7 +91,7 @@ export default function Component(props){
             </li>
             </ul>
             </div>
-            </div>
+            // </div>
           ))}
             {console.log(count)}
         </section>

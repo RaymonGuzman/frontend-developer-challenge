@@ -1,65 +1,47 @@
-@media (max-width: 1500px){
-    .internalContributor{
-        /* padding-inline-start: 4%;
-        float: inherit;
-        width: 90%; */
+/* Grid Styles -------------------------------------------*/
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
 
-        
-        /* background-size: 460px 460px;
-        background-repeat: no-repeat; */ /*Not Working */
-
-        
-
-    } 
-
+  /* padding-left: 7%; */
+  /* padding-bottom: 100%; */
 }
-    /* .internalBox{
-        padding-inline-start: 4%;
-        float: inline-start;
-        width: 45%;
 
-    }    */
+.externalContributor {
+  /* width:auto; */
 
-    /* Grid Styles -------------------------------------------*/
-    .cards {
-        display: grid;
-        grid-template-columns: repeat(2, minmax(300px, 1fr));
-        padding-inline-start: 15%;
-        padding-top: 10%;
-        /* grid-gap: 5%; */
-        /* 
-        padding-left: 7%; */
-        padding-bottom: 100%;
-    }
+  /* position:sticky; */
+  /* margin-top: -10%; */
+  /* padding-inline-start: 15%; */
+  /* padding-left: 10%; */
+  /* padding-bottom: 5%; */
+  /* float: inline-start; */
+  /* width: 45%; */
+  /* position: relative; */
+  /* display: flex; */
+  /* background-position-y: 50%; */
+  /* object-fit: cover; */
+}
+.internalContributor {
+  /* float: inline-start; */
+  width: auto;
+  /* width: 50%; */
+  /* position:relative; */
 
-    @media (min-width: 1501px){
-        .externalContributor{
-            /* position:sticky; */
-            margin-top: -10%;
-            /* padding-bottom: 5%; */
-            /* float: inline-start; */
-            /* width: 45%; */
-            /* position: relative; */
-            /* display: flex; */
-            /* background-position-y: 50%; */
-            
-            
-        }
-        .internalContributor{
-            /* float: inline-start; */
-            /* width: 100%; */
-            /* position:relative; */
+  object-fit: cover;
 
-            object-fit: cover;
-            
-            
-            /* background-size: 460px 460px;
+  /* background-size: 460px 460px;
             background-repeat: no-repeat; */ /*Not Working */
-            /* background: blue; */
-        }
-        .cards {
-            /* max-width: 100%; */
-            /* max-height: fit-content; */
-            /* margin: 0 auto 30px; */
-        } 
-    }
+  /* background: blue; */
+}
+.cards {
+  max-width: 1170px;
+  padding-top: 10%;
+  /* row-gap: 20px; */
+  column-gap: 465px;
+  margin: 0 auto auto;
+  /* grid-gap: 10%; */
+  /* max-width: 100%; */
+  /* max-height: fit-content; */
+  /* margin: 0 auto 30px; */
+}
