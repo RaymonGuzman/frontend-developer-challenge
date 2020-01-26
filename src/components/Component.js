@@ -75,21 +75,21 @@ export default function Component(props){
           {/* {console.log(contributors)} */}
           {contributors.map(item => (
             // <div className={component.externalContributor}>
-            <div className={component.internalContributor} style={{background: `url(${item.avatar_url}) no-repeat`, height:"400px", backgroundSize:"350px 350px"}}>
-            <ul>
-            <li key={item.id}>
-              <a href={item.node_id}>{item.login}</a>
-            </li>
-            <li>
-              <a href={item.html_url}> Profile </a>
-            </li>
-            {/* <li>
-              <img src={item.avatar_url}></img>
-            </li> */}
-            <li>
-              {item.contributions}
-            </li>
-            </ul>
+          <div className={component.internalContributor} style={{background: `url(${item.avatar_url}) no-repeat`, height:"400px", backgroundSize:"350px 350px"}}>
+            <div className={component.cardInfo}>
+                <a href="#">Read Article<span></span></a>
+                <ul>
+                <li key={item.id}>
+                  <a href={item.node_id}>{item.login}</a>
+                </li>
+                <li>
+                  <a href={item.html_url}> Profile </a>
+                </li>
+                <li>
+                  {item.contributions}
+                </li>
+                </ul>
+              </div>            
             </div>
             // </div>
           ))}

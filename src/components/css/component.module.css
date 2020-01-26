@@ -29,6 +29,23 @@
   /* position:relative; */
 
   object-fit: cover;
+  
+
+    max-width: 550px;
+  width:100%;
+  height: 500px;
+  /* position: absolute; */
+  font-family: 'Droid Serif', serif;
+  color:#fff;
+  top: 20%;
+  right: 0;  
+  left: 0;
+  /* margin: 0 auto; */
+  overflow: hidden;
+  border-radius: 0px;
+  box-shadow: 0px 10px 20px -9px rgba(0, 0, 0, 0.5);
+  text-align: center;
+  transition:all 0.4s;
 
   /* background-size: 460px 460px;
             background-repeat: no-repeat; */ /*Not Working */
@@ -44,4 +61,46 @@
   /* max-width: 100%; */
   /* max-height: fit-content; */
   /* margin: 0 auto 30px; */
+}
+
+  .internalContributor:hover {
+    
+    box-shadow: 0px 18px 20px -9px rgba(0, 10, 30, 0.75);
+    /* opacity: 1;
+    bottom: 100px; */
+    /* background: rgba(64, 64, 70,0.8); */
+    background: #8e7c49;
+    color:#fff;
+
+  }
+
+  .cardInfo {
+    box-sizing: border-box;
+   padding: 0;
+   width: 100%;
+   /* position: absolute; */
+   bottom: -40px;
+   left: 0;
+   margin: 0 auto;
+   padding: 0 50px;
+   font-style: 16px;
+   line-height: 24px;
+   z-index: 20;
+   opacity: 0;
+   transition: bottom 0.64s, opacity 0.63s cubic-bezier(0.33, 0.66, 0.66, 1);
+ }
+
+ .internalContributor:hover .cardInfo {
+  opacity: 1;
+  bottom: 100px;
+}
+
+.card-info a:hover{
+  background: #8e7c49;
+  color:#fff;
+}
+
+.card-info a:hover span{
+  filter: brightness(10);
+  opacity:1
 }
