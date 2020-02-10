@@ -75,7 +75,9 @@ export default function Component(props){
           {/* {console.log(contributors)} */}
           {contributors.map(item => (
             // <div className={component.externalContributor}>
-          <div className={component.internalContributor} style={{background: `url(${item.avatar_url}) no-repeat`, height:"400px", backgroundSize:"350px 350px"}}>
+<div className={component.colorOverlay}>
+        <div className={component.externalContributor}> 
+          <div className={component.internalContributor} style={{background: `url(${item.avatar_url}) no-repeat`, height:"350px", backgroundSize:"350px 350px"}}>
             <div className={component.cardInfo}>
                 <a href="#">Read Article<span></span></a>
                 <ul>
@@ -91,6 +93,10 @@ export default function Component(props){
                 </ul>
               </div>            
             </div>
+            <div className={component.gradientOverlay}></div>
+            </div>
+
+        </div>
             // </div>
           ))}
             {console.log(count)}
